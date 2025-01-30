@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+background-color: black;
+color: #EEEEEE;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(57,57,57,1) 100%, rgba(149,149,149,1) 100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 25px 25px;
+    flex-wrap: nowrap;
+}
+.parallax {
+    /* The image used */
+    background-image: url("bilder/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.Diashow-Container{
+    display: flex;            
+    justify-content: center;   
+}
+
+.Diashow {
+    display: none;
+    object-fit: cover; 
+}
+
+.Socials {
+    margin-left: 2vw;
+    width: fit-content;
+    align-items: center;
+    padding: 20px;
+}
+
+.fa {
+    background: #000000;
+    color: white;
+    font-size: 5vw;
+    margin-right: 8vw;
+    text-decoration: none;
+  }
+
+.TextContainer {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 0px;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.SpecialText {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #CCC;
+    max-height: 50%;
+    position: relative;
+    animation: HideText 5s;
+    font-size: 4vw; 
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.Line {
+    position: absolute;
+    top: 5%;
+    left: 102%;
+    width: 1%;
+    height: 100%;
+    background-color: #CCC;
+    border-radius: 30px;
+    animation: line-animation 5s;
+}
+
+@keyframes HideText {
+    0% { clip-path: polygon(-2% -2%, -2% -2%, -2% 102%, -2% 102%); }
+    20% { clip-path: polygon(-2% -2%, -2% -2%, -2% 102%, -2% 102%); }
+    90% { clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%); }
+    100% { clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%); }
+    /* 50% { clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%); }
+    60% { clip-path: polygon(-2% -2%, 102% -2%, 102% 102%, -2% 102%); }
+    80% { clip-path: polygon(-2% -2%, -2% -2%, -2% 102%, -2% 102%); }
+    100% { clip-path: polygon(-2% -2%, -2% -2%, -2% 102%, -2% 102%); } */
+}
+
+@keyframes line-animation {
+    0% { transform: scaleX(1); left: calc(-2%); }
+    20% { transform: scaleX(2.1); left: calc(-2%); }
+    90% { transform: scaleX(2.1); left: calc(102%); }
+    100% { transform: scaleX(1); left: calc(102%); }
+   /* 40% { transform: scaleX(1); left: calc(102%); }
+     60% { transform: scaleX(2.1); left: calc(102%); }
+    80% { transform: scaleX(2.1); left: calc(-2%); }
+    100% { transform: scaleX(1); left: calc(-2%); } */
+}
+
+@media (max-width: 768px) { /* Für kleinere Bildschirme */
+    .SpecialText {
+        font-size: 8vw; 
+    }
+
+    header {
+        flex-direction: row; 
+    }
+    .fa {
+        font-size: 10vw;
+      }
+}
+
+  
