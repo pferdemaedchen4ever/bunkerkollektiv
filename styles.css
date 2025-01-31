@@ -175,5 +175,8 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(57,57,57,1) 100%, rg
     p {
         font-size: 3vw;
     }
+    .photo-container img {
+        max-width: 100%; 
+    }
 }
   
